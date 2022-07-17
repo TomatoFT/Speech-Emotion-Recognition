@@ -1,0 +1,11 @@
+tensorflow
+pandas
+numpy
+np_utils
+librosa
+matplotlib
+joblib
+sklearn
+keras
+sounddevice
+scipy
