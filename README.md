@@ -13,8 +13,8 @@ pip install -r requirements.txt
 python RecordAudio.py
 
 python PredictEmotion.py
-
 ```
+
 The RecordAudio.py will record your voice and save it to output.wav. PredictEmotion.py will predict your Emotion through your audio.
 
 Feel free to clone my code and i will appreciate if you update it to have better performances
