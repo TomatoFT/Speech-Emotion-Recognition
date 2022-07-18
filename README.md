@@ -2,8 +2,9 @@
 This is the repository for Final Project of DS102 (Statistical Machine Learning) of University of Information Technology (UIT)
 <p>First you need to install Python first</p>
 <p>The whole training process is on Google Colab Notebook, just Ctrl F9 to make all things done</p>
-<p>Then the colab will download your training models to your local machines</p>
-Do the following steps to run the demo of these algorithms (except CNN because of my machine is can't setting a GPU for Tensorflow at that moment)
+<p>Then the colab will download your training models to your local machines
+Do the following steps to run the demo of these algorithms (except CNN because of my machine is can't setting a GPU for Tensorflow at that moment) </p>
+# How to demo
 ```
 git clone https://github.com/TomatoFT/Speech-Emotion-Recognoiton
 
