@@ -1,4 +1,4 @@
-# Speech-Emotion-Recognoiton
+# Speech Emotion Recognoiton
 This is the repository for Final Project of DS102 (Statistical Machine Learning) of University of Information Technology (UIT)
 <p>First you need to install Python first</p>
 <p>The whole training process is on Google Colab Notebook, just Ctrl F9 to make all things done</p>
