@@ -5,7 +5,7 @@ This is the repository for Final Project of DS102 (Statistical Machine Learning)
 <p>Then the colab will download your training models to your local machines
 Do the following steps to run the demo of these algorithms (except CNN because of my machine is can't setting a GPU for Tensorflow at that moment) </p>
 # How to demo
-`
+````
 git clone https://github.com/TomatoFT/Speech-Emotion-Recognoiton
 
 pip install -r requirements.txt
@@ -13,7 +13,7 @@ pip install -r requirements.txt
 python RecordAudio.py
 
 python PredictEmotion.py
-`
+````
 
 The RecordAudio.py will record your voice and save it to output.wav. PredictEmotion.py will predict your Emotion through your audio.
 
