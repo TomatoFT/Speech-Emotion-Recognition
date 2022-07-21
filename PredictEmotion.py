@@ -3,7 +3,8 @@ import soundfile as sf
 import numpy as np
 import pandas as pd
 import os
-
+import tensorflow as tf
+from tensorflow import keras
 filename = 'output.wav'
 import joblib
 import librosa
@@ -98,7 +99,7 @@ def get_features(path):
 # data, fs = sf.read(filename, dtype='float32')  
 # sd.play(data, fs)
 # status = sd.wait()  # Wait until file is done playing
-
+CNN = tf.keras.models.load_model('Model/content/CNN')
 LR = joblib.load("Model/LogisticRegresion.pkl")
 SVM = joblib.load("Model/SVM.pkl")
 Knn = joblib.load("Model/Knn.pkl")
@@ -106,17 +107,36 @@ test_case = 'output.wav'
 featuring = get_features(test_case)
 X3 = [featuring]
 X4 = np.expand_dims(X3, axis=2)
+nl = []
 # scaler = StandardScaler()
 # X3 = scaler.fit_transform(X3)
 # X3 = X3.reshape(1, -1)
 pred_test_1 = LR.predict(X3)
 pred_test_2 = SVM.predict(X3)
 pred_test_3 = Knn.predict(X3)
-
+pred_test_4 = CNN.predict(X4)
+# print(pred_test_3, type(pred_test_3))
+pred_test_4 = pred_test_4.flatten()
+i=0
+for pred in pred_test_4:
+    nl.append(pred)
+index_max = max(nl)
+# print(index_max)
+# print(nl)
+for pred in nl:
+    if pred == index_max:
+        print(i, type(i))
+    else:
+        i+=1
+print(Decoding(np.ndarray(i)))
+# pred_test_4 = CNN.predict(X3)
 # encoder2.fit_transform(np.array(Y1).reshape(-1, 1))
 # y_pred2 = encoder2.inverse_transform(pred_test.reshape(-1, 1))
 # print(f"Logistic Regression: {Decoding(pred_test_1)},SVM: {Decoding(pred_test_2)}, K-Nearest Neighbour: {Decoding(pred_test_3)}")
 df = pd.DataFrame({"Logistic Regression":Decoding(pred_test_1),
                     "SVM": Decoding(pred_test_2),
-                    "Knn": Decoding(pred_test_3)}, index=["Prediction"])
+                    "Knn": Decoding(pred_test_3),
+                    'CNN': Decoding(np.ndarray(i))
+                    }, index=["Prediction"])
 print(df)
+# 'CNN': Decoding(pred_test_4)
