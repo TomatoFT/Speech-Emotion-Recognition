@@ -16,9 +16,8 @@ git clone https://github.com/TomatoFT/Speech-Emotion-Recognoiton
 
 cd Speech-Emotion-Recognoiton
 
-
-<h3>Create Anaconda Virtual Environment</h3>
 ```
+<h3>Create Anaconda Virtual Environment</h3>
 conda create --name TrialEnv
 
 conda activate TrialEnv
