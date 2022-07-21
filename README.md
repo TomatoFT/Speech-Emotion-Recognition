@@ -4,7 +4,7 @@ This is the repository for Final Project of DS102 (Statistical Machine Learning)
 <p>The whole training process is on Google Colab Notebook, just Ctrl F9 to make all things done</p>
 <p>Then the colab will download your training models to your local machines, you will need Anaconda to set up Tensorflow more easily.
 Do the following steps to run the demo of these algorithms </p>
-<h2> How to demo</h2>
+<h2> Set up the environment to demo </h2>
 <p>
 The RecordAudio.py will record your voice and save it to output.wav. PredictEmotion.py will predict your Emotion through your audio.</p>
 <p> Feel free to clone my code and i will appreciate if you update it to have better performances</p>
@@ -18,21 +18,27 @@ cd Speech-Emotion-Recognoiton
 
 ```
 <h3>Create Anaconda Virtual Environment</h3>
+
+```
 conda create --name TrialEnv
 
 conda activate TrialEnv
 
 conda install pip
+
 ```
 <h3>Set up the demo of your Emotion Prediction of your voice</h3>
+
 ```
 pip install -r requirements.txt
 
 python RecordAudio.py
 
 python PredictEmotion.py
+
 ```
+
 <h3>Exit the Anaconda Virtual Environment </h3>
+
 ```
 conda deactivate
-```
