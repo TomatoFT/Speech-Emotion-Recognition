@@ -32,7 +32,7 @@ python RecordAudio.py
 
 python PredictEmotion.py
 ```
-<h3>Exit the Anaconda Virtual Environment</h3>
+<h3>Exit the Anaconda Virtual Environment </h3>
 ```
 conda deactivate
 ```
