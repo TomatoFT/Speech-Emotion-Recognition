@@ -10,12 +10,13 @@ The RecordAudio.py will record your voice and save it to output.wav. PredictEmot
 <p> Feel free to clone my code and i will appreciate if you update it to have better performances</p>
 
 <h3>First clone the repository</h3>
+
 ```
 git clone https://github.com/TomatoFT/Speech-Emotion-Recognoiton
 
 cd Speech-Emotion-Recognoiton
 
-```
+
 <h3>Create Anaconda Virtual Environment</h3>
 ```
 conda create --name TrialEnv
