@@ -1,4 +1,4 @@
-tensorflow
+tensorflow==2.0
 pandas
 numpy
 np_utils
