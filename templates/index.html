@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="img/favicon.ico">
+<title>Audio Sale Landing Page Template - Bootstrap 4+</title>
+<!-- Font Awesome CSS -->
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<!-- Bootstrap core CSS -->
+<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+<!-- Googe Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="{{ url_for('static', filename='audiolanding.css') }}" rel="stylesheet">
+<!-- Jquery -->
+<script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+</head>
+<body>
+
+<!-- BEGIN HERO
+================================================== -->
+<div class="section-hero">
+	<div class="container text-center">
+		<h1>DS102 DEMO: REAL-TIME SPEECH EMOTION RECOGNITION</h1>
+		<p class="lead">
+			Click recording to recording your voice and click predict to predict emotion of your voice.<br>
+			 Have fun to try this demo.
+		</p>
+		<form action="{{url_for ('recording') }}" method="POST" >
+			<button type="submit" class="btn btn-danger" action="{{url_for('recording')}}">Recording</button>
+		</form>
+		<!-- <p><a href="{{ url_for('predicting') }}" class="btn btn-success" method="GET" type="submit"><i class="fa fa-shopping-cart"></i> Predict</a></p> -->
+		<form action="{{url_for ('predicting') }}" method="POST" >
+			<button type="submit" class="btn btn-success" action="{{url_for('predicting')}}">Predict</button>
+		</form>
+		<iframe width="850px" height="400" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/329991290&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true">
+		</iframe>
+	</div>
+	<!-- /.container -->
+</div>
+<!-- END HERO
+================================================== -->
+
+<!-- BEGIN ABOUT
+================================================== -->
+<section id="about">
+<div class="section-about">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<h2>More about the creators</h2>
+				<div class="spacer">
+				</div>
+				<h6>Knowing more about us</h6>
+			</div>
+			<div class="col-md-4">
+				<p>
+					We are group 14 of DS102 courses of University of Information Technology.
+				</p>
+			</div>
+			<div class="col-md-4">
+				<p>
+					These models still not working with <span class="badge badge-danger">100% </span> accuracy. It need more data and better models to predict more accurate.
+				</p>
+				<p>
+					 In this project, we built and implemented models and algorithms we studied in Statistical Machine Learning course of UIT-VNUHCM. You can visit our Github and give it star if it you find it valuable. Feel free to clone our code.
+				</p>
+			</p>
+		</div>
+	</div>
+</div>
+</div>
+</section>
+<!-- END ABOUT
+================================================== -->
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="{{url_for('static', filename='js/tether.min.js')}}"></script>
+<script src="{{url_for('static', filename='js/bootstrap.min.js')}} j"></script>
+<script src="{{url_for('static', filename='js/audiolanding.js')}} "></script>
+<script src="{{url_for('static', filename='js/ie10-viewport-bug-workaround.js')}} "></script>
+
+</body>
+</html>

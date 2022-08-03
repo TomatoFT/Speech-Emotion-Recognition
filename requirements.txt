@@ -9,3 +9,5 @@ sklearn
 keras
 sounddevice
 scipy
+flask
+gunicorn

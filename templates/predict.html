@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="img/favicon.ico">
+<title>Audio Sale Landing Page Template - Bootstrap 4+</title>
+<!-- Font Awesome CSS -->
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<!-- Bootstrap core CSS -->
+<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+<!-- Googe Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="{{ url_for('static', filename='audiolanding.css') }}" rel="stylesheet">
+<!-- Jquery -->
+<script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+</head>
+<body>
+
+
+<!-- BEGIN TESTIMONIALS
+================================================== -->
+<section id="testimonials">
+<div class="container">
+<div class="text-center">
+	<h3 class="text-white margin-bottom40">Machine Learning models predicted emotion of your voice</h3>
+</div>
+<div class="card-columns">
+	<div class="card">
+		<img class="card-img-top img-fluid" src="{{ url_for('static', filename='img/testimonial1.jpg') }}" alt="Card image cap">
+		<div class="card-block">
+			<h5 class="card-title">Logistic Regression</h5>
+			<p class="card-text">
+				I think you are {{predictions.LogisticRegression}}
+			</p>
+		</div>
+	</div>
+	<div class="card p-3">
+		<blockquote class="card-block card-blockquote">
+			<p>
+				These machine learning models can't predict 100% correctly, so this page is just for entertainment purposes. This is the demo of Speech Emotion Recognition
+				(Final Project of DS102: Statistical Machine Learning of University of Information Technology - Viet Nam National University of Ho Chi Minh City)		</p>
+			<footer>
+			<small class="text-muted">
+			Someone famous in <cite title="Source Title">Source Title</cite>
+			</small>
+			</footer>
+		</blockquote>
+	</div>
+	<div class="card">
+		<img class="card-img-top img-fluid" src="{{ url_for('static', filename='img/testimonial2.jpg') }}" alt="Card image cap">
+		<div class="card-block">
+			<h5 class="card-title">K-nearest Neighbors</h5>
+			<p class="card-text">
+				I think you are {{predictions.Knn}}
+			</p>
+		</div>
+	</div>
+	<div class="card">
+		<img class="card-img-top img-fluid" src="{{ url_for('static', filename='img/testimonial2.jpg') }}" alt="Card image cap">
+		<div class="card-block">
+			<h5 class="card-title">Support Machine Vector</h5>
+			<p class="card-text">
+				I think you are {{predictions.SVM}}
+			</p>
+		</div>
+	</div>
+	<div class="card">
+		<img class="card-img-top img-fluid" src="{{ url_for('static', filename='img/testimonial2.jpg') }}" alt="Card image cap">
+		<div class="card-block">
+			<h5 class="card-title">Convulational Neural Network</h5>
+			<p class="card-text">
+				I think you are {{predictions.CNN}}
+			</p>
+		</div>
+	</div>
+	<div class="card">
+		<img class="card-img-top img-fluid" src="{{ url_for('static', filename='img/testimonial2.jpg') }}" alt="Card image cap">
+		<div class="card-block">
+			<h5 class="card-title">These machine learning models can't predict 100% correctly, so this page is just for entertainment purposes.</h5>
+			</p>
+		</div>
+	</div>
+</div>
+</div>
+</section>
+
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="{{url_for('static', filename='js/tether.min.js')}}"></script>
+<script src="{{url_for('static', filename='js/bootstrap.min.js')}} j"></script>
+<script src="{{url_for('static', filename='js/audiolanding.js')}} "></script>
+<script src="{{url_for('static', filename='js/ie10-viewport-bug-workaround.js')}} "></script>
+
+</body>
+</html>

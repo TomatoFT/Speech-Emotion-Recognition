@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="img/favicon.ico">
+<title>Audio Sale Landing Page Template - Bootstrap 4+</title>
+<!-- Font Awesome CSS -->
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<!-- Bootstrap core CSS -->
+<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+<!-- Googe Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="{{ url_for('static', filename='audiolanding.css') }}" rel="stylesheet">
+<!-- Jquery -->
+<script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+</head>
+<body>
+
+<!-- BEGIN HERO
+================================================== -->
+<div class="section-hero">
+	<div class="container text-center">
+		<h1>DS102 DEMO: REAL-TIME SPEECH EMOTION RECOGNITION</h1>
+		<p class="lead">
+			Click recording to recording your voice and click predict to predict emotion of your voice.<br>
+			 Have fun to try this demo.
+		</p>
+		<form action="{{url_for ('recording') }}" method="POST" >
+			<button type="submit" class="btn btn-primary" action="{{url_for('recording')}}">Recording</button>
+		</form>
+		<!-- <p><a href="{{ url_for('predicting') }}" class="btn btn-success" method="GET" type="submit"><i class="fa fa-shopping-cart"></i> Predict</a></p> -->
+		<form action="{{url_for ('predicting') }}">
+			<button type="submit" class="btn btn-success" action="{{url_for('predicting')}}">Predict</button>
+		</form>
+			<audio controls>
+				<source src="{{url_for('static', filename='output.wav')}}" type="audio/wav">
+				Your browser does not support the audio element.
+			  </audio>
+	</div>
+	<!-- /.container -->
+</div>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="{{url_for('static', filename='js/tether.min.js')}}"></script>
+<script src="{{url_for('static', filename='js/bootstrap.min.js')}} j"></script>
+<script src="{{url_for('static', filename='js/audiolanding.js')}} "></script>
+<script src="{{url_for('static', filename='js/ie10-viewport-bug-workaround.js')}} "></script>
+
+</body>
+</html>
