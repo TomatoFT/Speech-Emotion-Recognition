@@ -54,4 +54,4 @@ conda deactivate
 ```
 python app.py
 ```
-<p>NOTICE: You must speak after you click Recording</p>
+<p>NOTICE: You must speak after clicking Recording</p>
