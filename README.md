@@ -48,7 +48,7 @@ conda deactivate
 ```
 
 # Demo in Flask Web-app
-<h5>Clone the repository and create Anaconda Virtual Environment and install Dependencies same as Command Prompt Demo</h5>
+<h5>Clone the repository and create Anaconda Virtual Environment and install dependencies same as Command Prompt Demo</h5>
 
 ```
 python app.py
