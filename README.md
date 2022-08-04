@@ -8,6 +8,7 @@ Do the following steps to run the demo of these algorithms </p>
 <p>
 The RecordAudio.py will record your voice and save it to output.wav. PredictEmotion.py will predict your Emotion through your audio.</p>
 <p> Feel free to clone my code and i will appreciate if you update it to have better performances</p>
+
 # Demo in Command Prompt
 
 <h3>First clone the repository</h3>
@@ -53,3 +54,4 @@ conda deactivate
 ```
 python app.py
 ```
+<p>NOTICE: You must speak after you click Recording</p>
