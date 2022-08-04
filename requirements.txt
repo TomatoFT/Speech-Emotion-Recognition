@@ -1,4 +1,4 @@
-tensorflow==2.0
+tensorflow
 pandas
 numpy
 np_utils
@@ -11,3 +11,4 @@ sounddevice
 scipy
 flask
 gunicorn
+

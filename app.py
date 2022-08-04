@@ -98,22 +98,22 @@ def predicting():
 
     def get_features(path):
         # duration and offset are used to take care of the no audio in start and the ending of each audio files as seen above.
-        data, sample_rate = librosa.load(path, duration=2.5, offset=0.6)
+        data, sample_rate = librosa.load(path, duration=4, offset=0.6)
         
         # without augmentation
-        # res1 = extract_features(data)
-        # result = np.array(res1)
+        res1 = extract_features(data)
+        result = np.array(res1)
         
-        # # # data with noise
-        # # noise_data = noise(data)
-        # # res2 = extract_features(noise_data)
-        # # result = np.vstack((result, res2)) # stacking vertically
+        # # data with noise
+        # noise_data = noise(data)
+        # res2 = extract_features(noise_data)
+        # result = np.array((result, res2) # stacking vertically
         
-        # # data with stretching and pitching
-        new_data = stretch(data)
-        data_stretch_pitch = pitch(new_data, sample_rate)
-        res3 = extract_features(data_stretch_pitch)
-        result = np.array(res3) # stacking vertically
+        # # # data with stretching and pitching
+        # new_data = stretch(data)
+        # data_stretch_pitch = pitch(new_data, sample_rate)
+        # res3 = extract_features(data_stretch_pitch)
+        # result = np.array(res3) # stacking vertically
         
         return result
 
@@ -137,8 +137,8 @@ def predicting():
     pred_test_2 = SVM.predict(X3)
     pred_test_3 = Knn.predict(X3)
     pred_test_4 = CNN.predict(X4)
-    # print(pred_test_3, type(pred_test_3))
     pred_test_4 = pred_test_4.flatten()
+    print('pred_test_3',pred_test_3)
     i=0
     for pred in pred_test_4:
         nl.append(pred)
@@ -160,6 +160,7 @@ def predicting():
                         "Knn": Decoding(pred_test_3),
                         'CNN': Decoding(np.ndarray(i))
                         }, index=["Prediction"])
+    print(df)
     predictions = {"LogisticRegression":Decoding(pred_test_1),
                         "SVM": Decoding(pred_test_2),
                         "Knn": Decoding(pred_test_3),
