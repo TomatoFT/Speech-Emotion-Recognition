@@ -41,4 +41,4 @@ python PredictEmotion.py
 <h3>Exit the Anaconda Virtual Environment </h3>
 
 ```
-conda deactivate
+conda deactivate 
